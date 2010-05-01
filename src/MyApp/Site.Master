@@ -1,0 +1,21 @@
+<%@ Master Language="C#" Inherits="FubuMVC.Core.View.FubuMasterPage" %>
+<%@ Import Namespace="FubuMVC.UI" %>
+<%@ Import Namespace="MyApp.Actions" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MyApp</title>
+</head>
+<body>
+<div id="navigationMenu">
+<ul>
+<li><a href="<%= this.Urls.UrlFor<Home>(x => x.Index()) %>">Home</a></li>
+<li><%= this.LinkTo(new ShowPersonRequest()).Text("Show Person") %></li>
+</ul>
+</div>
+<h1>MyApp</h1>
+    <asp:ContentPlaceHolder id="Content" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</body>
+</html>

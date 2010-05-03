@@ -1,21 +1,44 @@
 <%@ Master Language="C#" Inherits="FubuMVC.Core.View.FubuMasterPage" %>
-<%@ Import Namespace="FubuMVC.UI" %>
-<%@ Import Namespace="MyApp.Actions" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>MyApp</title>
+    <link rel="stylesheet" href="Content/Styles/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="Content/Styles/jquery-ui-1.8.1.custom.css" type="text/css" />
+    <link rel="stylesheet" href="Content/Styles/myapp.css" type="text/css">
 </head>
 <body>
-<div id="navigationMenu">
-<ul>
-<li><a href="<%= this.Urls.UrlFor<Home>(x => x.Index()) %>">Home</a></li>
-<li><%= this.LinkTo(new ShowPersonRequest()).Text("Show Person") %></li>
-</ul>
-</div>
-<h1>MyApp</h1>
-    <asp:ContentPlaceHolder id="Content" runat="server">
+    <div class="container">
+        <asp:ContentPlaceHolder ID="Navigation" runat="server">
+            <div class="span-24 last">
+                <ul id="menu" class="large">
+                    <li><a href="<%= Urls.UrlFor<Home>(x => x.Index()) %>">Home</a></li>
+                    <li><%= this.LinkTo(new EditPatientRequest()).Text("Edit Patient") %></li>
+                    <li><%= this.LinkTo(new MakeAppointmentRequest()).Text("Make Appointment") %></li>
+                    <li><a href="#" id="siteHelpLink">Help</a></li>
+                </ul>
+            </div>
+        </asp:ContentPlaceHolder>
+        <div class="span-24 last">
+            <h1>MyApp</h1>
+            <asp:ContentPlaceHolder id="Content" runat="server">
         
-    </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
 </body>
+
+<script src="Content/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="Content/Scripts/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
+<script src="Content/Scripts/help.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $("#siteHelpLink").click(function(){
+            showHelp("Using MyApp");
+            return false;
+        });
+    });
+
+</script>
 </html>

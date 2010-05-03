@@ -2,7 +2,7 @@
 
 namespace MyApp.Actions
 {
-    public partial class ShowPerson : FubuPage<ShowPersonResponse>
+    public class EditPatient : FubuPage<EditPatientResponse>
     {
     }
 }

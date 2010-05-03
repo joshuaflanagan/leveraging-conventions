@@ -61,14 +61,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Actions\ShowPerson.aspx" />
+    <Content Include="Actions\Help.aspx" />
+    <Content Include="Actions\MakeAppointment.aspx" />
+    <Content Include="Actions\EditPatient.aspx" />
     <Content Include="Actions\Index.aspx" />
+    <Content Include="Content\Scripts\help.js" />
+    <Content Include="Content\Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Content\Scripts\jquery-ui-1.8.1.custom.min.js" />
+    <Content Include="Content\Styles\jquery-ui-1.8.1.custom.css" />
+    <Content Include="Content\Styles\myapp.css" />
+    <Content Include="Content\Styles\screen.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actions\ShowPerson.aspx.cs">
-      <DependentUpon>ShowPerson.aspx</DependentUpon>
+    <Compile Include="Actions\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Actions\MakeAppointment.aspx.cs">
+      <DependentUpon>MakeAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Actions\EditPatient.aspx.cs">
+      <DependentUpon>EditPatient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Actions\Home.cs" />
@@ -79,7 +95,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\Patient.cs" />
     <Compile Include="MyFubuRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -2,7 +2,7 @@
 
 namespace MyApp.Actions
 {
-    public class Index : FubuPage<IndexResponse>
+    public class Help : FubuPage<HelpResponse>
     {
     }
 }

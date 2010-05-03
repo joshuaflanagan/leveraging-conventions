@@ -1,0 +1,21 @@
+h1 { color: Green }
+h2 {
+    border-bottom:thin solid #CCCCCC;
+    margin-right:16em;
+}
+
+#menu {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+#menu li {
+    display:inline;
+    margin-left: 2em;
+}
+#menu a { text-decoration: none;}
+
+input {
+    padding:5px;
+    width:300px;
+}

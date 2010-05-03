@@ -1,3 +1,4 @@
+using FubuMVC.Core;
 using MyApp.Models;
 
 namespace MyApp.Actions
@@ -9,17 +10,45 @@ namespace MyApp.Actions
             return new IndexResponse();
         }
 
-        public ShowPersonResponse ShowPerson(ShowPersonRequest request)
+        public EditPatientResponse EditPatient(EditPatientRequest request)
         {
-            return new ShowPersonResponse();
+            return new EditPatientResponse();
+        }
+
+        public MakeAppointmentResponse MakeAppointment(MakeAppointmentRequest request)
+        {
+            return new MakeAppointmentResponse();
+        }
+
+        public HelpResponse Help(HelpRequest request)
+        {
+            return new HelpResponse{Topic = request.Topic};
         }
     }
 
-    public class ShowPersonRequest {}
-
-    public class ShowPersonResponse
+    public class HelpResponse
     {
-        public Person Person { get; set; }
+        public string Topic { get; set; }
+    }
+
+    public class HelpRequest
+    {
+        [QueryString]
+        public string Topic { get; set; }
+    }
+
+    public class MakeAppointmentRequest {}
+
+    public class MakeAppointmentResponse
+    {
+        public Appointment Appointment { get; set; }
+    }
+
+    public class EditPatientRequest {}
+
+    public class EditPatientResponse
+    {
+        public Patient Patient { get; set; }
     }
 
     public class IndexResponse {}

@@ -26,14 +26,5 @@ namespace MyApp
 
     public class MyAppHtmlConventions : HtmlConventionRegistry
     {
-        public MyAppHtmlConventions()
-        {
-            Labels.Always.BuildBy(req => new HtmlTag("label").Text(breakUpCamelCase(req.Accessor.FieldName)));
-        }
-
-        private static string breakUpCamelCase(string fieldName)
-        {
-            return Regex.Replace(fieldName, "([a-z])([A-Z])", "$1 $2");
-        }
     }
 }

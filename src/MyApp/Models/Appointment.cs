@@ -2,7 +2,7 @@ using System;
 
 namespace MyApp.Models
 {
-    public class Appointment
+    public class Appointment : Entity
     {
         public string Patient { get; set; }
         public DateTime CoverageDate { get; set; }

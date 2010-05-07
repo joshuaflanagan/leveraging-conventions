@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\lib\fluent-nhibernate\FluentNHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="FubuCore, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\fubumvc\FubuCore.dll</HintPath>
@@ -48,6 +51,9 @@
     <Reference Include="HtmlTags, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\fubumvc\HtmlTags.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\lib\NHibernate\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\..\lib\fubumvc\StructureMap.dll</HintPath>
@@ -95,7 +101,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Database.cs" />
     <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="MyFubuRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

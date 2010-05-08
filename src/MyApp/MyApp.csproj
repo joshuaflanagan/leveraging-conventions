@@ -104,6 +104,7 @@
     </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\Attributes.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="MyAppHtml.cs" />

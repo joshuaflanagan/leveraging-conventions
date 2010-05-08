@@ -27,6 +27,12 @@
 </p>
 
 <p>
+    <%= this.LabelFor(x => x.Patient.State) %>
+    <br />
+    <%= this.InputFor(x => x.Patient.State) %>
+</p>
+
+<p>
     <%= this.LabelFor(x => x.Patient.Anniversary) %>
     <br />
     <%= this.InputFor(x => x.Patient.Anniversary) %>

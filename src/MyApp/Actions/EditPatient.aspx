@@ -4,8 +4,7 @@
 <script type="text/javascript">
 
     $(document).ready(function(){
-        $("#patient-birthday").datepicker();
-        $("#patient-anniversary").datepicker();
+        $(".date").datepicker();
     });
 
 </script>
@@ -22,7 +21,7 @@
 <p>
     <%= this.LabelFor(x => x.Patient.Birthday) %>
     <br />
-    <%= this.InputFor(x => x.Patient.Birthday) %>
+    <%= this.InputFor(x => x.Patient.Birthday).AddClass("date") %>
 </p>
 
 <p>
@@ -34,6 +33,6 @@
 <p>
     <%= this.LabelFor(x => x.Patient.Anniversary) %>
     <br />
-    <%= this.InputFor(x => x.Patient.Anniversary) %>
+    <%= this.InputFor(x => x.Patient.Anniversary).AddClass("date") %>
 </p>
 </asp:Content>

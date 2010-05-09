@@ -3,6 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Scripts" runat="server">
 <script type="text/javascript">
 
+    $(document).ready(function(){
+        $("#patient-birthday").datepicker();
+        $("#patient-anniversary").datepicker();
+    });
+
 </script>
 </asp:Content>
 
@@ -17,7 +22,7 @@
 <p>
     <%= this.LabelFor(x => x.Patient.Birthday) %>
     <br />
-    <%= this.InputFor(x => x.Patient.Birthday) %>
+    <%= this.InputFor(x => x.Patient.Birthday).Id("patient-birthday") %>
 </p>
 
 <p>
@@ -29,6 +34,6 @@
 <p>
     <%= this.LabelFor(x => x.Patient.Anniversary) %>
     <br />
-    <%= this.InputFor(x => x.Patient.Anniversary) %>
+    <%= this.InputFor(x => x.Patient.Anniversary).Id("patient-anniversary") %>
 </p>
 </asp:Content>

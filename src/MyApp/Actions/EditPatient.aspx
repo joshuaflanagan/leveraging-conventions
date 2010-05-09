@@ -21,7 +21,7 @@
 <p>
     <%= this.LabelFor(x => x.Patient.Birthday) %>
     <br />
-    <%= this.InputFor(x => x.Patient.Birthday).AddClass("date") %>
+    <%= this.InputFor(x => x.Patient.Birthday) %>
 </p>
 
 <p>
@@ -33,6 +33,6 @@
 <p>
     <%= this.LabelFor(x => x.Patient.Anniversary) %>
     <br />
-    <%= this.InputFor(x => x.Patient.Anniversary).AddClass("date") %>
+    <%= this.InputFor(x => x.Patient.Anniversary) %>
 </p>
 </asp:Content>

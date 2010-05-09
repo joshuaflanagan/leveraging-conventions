@@ -4,7 +4,6 @@
 <script type="text/javascript">
 
     $(document).ready(function(){
-        $(".date").datepicker();
     });
 
 </script>

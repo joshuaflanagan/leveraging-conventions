@@ -27,6 +27,9 @@
             }
             return false;
         });
+
+        $(".date").datepicker();
+
     });
 </script>
 <asp:ContentPlaceHolder Id="Scripts" runat="server" />

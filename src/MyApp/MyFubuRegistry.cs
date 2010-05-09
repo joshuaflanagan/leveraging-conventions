@@ -18,11 +18,7 @@ namespace MyApp
             HomeIs<Home>(x => x.Index());
             Routes.IgnoreControllerNamespaceEntirely().IgnoreControllerNamesEntirely();
             this.UseDefaultHtmlConventions();
-            this.HtmlConvention<MyAppHtmlConventions>();
+            this.HtmlConvention<MyAppHtml>();
         }
-    }
-
-    public class MyAppHtmlConventions : HtmlConventionRegistry
-    {
     }
 }

@@ -105,6 +105,7 @@
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Patient.cs" />
+    <Compile Include="MyAppHtml.cs" />
     <Compile Include="MyFubuRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

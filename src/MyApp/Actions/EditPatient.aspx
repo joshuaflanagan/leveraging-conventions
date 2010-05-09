@@ -1,4 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Edit.Master" AutoEventWireup="true" CodeBehind="EditPatient.aspx.cs" Inherits="MyApp.Actions.EditPatient" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="Scripts" runat="server">
+<script type="text/javascript">
+
+</script>
+</asp:Content>
+
 <asp:Content ContentPlaceHolderID="Content" runat="server">
 <h2>Editing a patient</h2>
 <p>

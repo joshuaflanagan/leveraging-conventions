@@ -29,4 +29,5 @@
         });
     });
 </script>
+<asp:ContentPlaceHolder Id="Scripts" runat="server" />
 </asp:Content>

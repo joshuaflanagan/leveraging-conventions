@@ -28,7 +28,8 @@
             return false;
         });
 
-        $(".date").datepicker();
+        $(".date").not(".time").datepicker();
+        $(".time").datepicker({showTime: true});
 
     });
 </script>

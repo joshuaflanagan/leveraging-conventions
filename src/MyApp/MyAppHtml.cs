@@ -9,7 +9,14 @@ namespace MyApp
         public MyAppHtml()
         {
             Editors.Always.Modify((info, tag) => tag.Id(makeId(info.Accessor.Name)));
-            Editors.IfPropertyIs<DateTime>().Modify(tag => tag.AddClass("date"));
+            Editors.IfPropertyIs<DateTime>().Modify((field, tag) =>
+            {
+                tag.AddClass("date");
+                if (field.Accessor.Name.EndsWith("Time"))
+                {
+                    tag.AddClass("time");
+                }
+            });
         }
 
         private string makeId(string name)

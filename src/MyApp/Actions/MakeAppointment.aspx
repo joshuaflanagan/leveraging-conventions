@@ -23,13 +23,13 @@
 <p>
     <%= this.LabelFor(x => x.Appointment.StartTime) %>
     <br />
-    <%= this.InputFor(x => x.Appointment.StartTime).AddClass("time") %>
+    <%= this.InputFor(x => x.Appointment.StartTime) %>
 </p>
 
 <p>
     <%= this.LabelFor(x => x.Appointment.EndTime) %>
     <br />
-    <%= this.InputFor(x => x.Appointment.EndTime).AddClass("time") %>
+    <%= this.InputFor(x => x.Appointment.EndTime) %>
 </p>
 
 </asp:Content>

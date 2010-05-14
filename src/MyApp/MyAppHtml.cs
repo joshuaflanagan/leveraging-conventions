@@ -1,4 +1,5 @@
-﻿using FubuMVC.UI;
+﻿using System;
+using FubuMVC.UI;
 using MyApp.Models;
 
 namespace MyApp
@@ -9,6 +10,7 @@ namespace MyApp
 		{
 			Editors.AddClassForAttribute<RequiredAttribute>("required");
             Editors.ModifyForAttribute<MaximumLengthAttribute>((tag, attr) => tag.Attr("maxlength", attr.Length));
+		    Editors.IfPropertyIs<DateTime>().AddClass("date");
 		}
     }
 }

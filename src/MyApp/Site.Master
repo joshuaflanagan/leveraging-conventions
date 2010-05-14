@@ -39,6 +39,13 @@
             showHelp("Using MyApp");
             return false;
         });
+
+        $(".helpLink").live("click", function(){
+            var data = $(this).metadata();
+            if (!data) return;
+            showHelp(data.helpTopic);
+            return false;
+        });
     });
 </script>
 <asp:ContentPlaceHolder id="Scripts" runat="server">

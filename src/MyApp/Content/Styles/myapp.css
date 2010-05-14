@@ -19,3 +19,24 @@ input {
     padding:5px;
     width:300px;
 }
+.helpLink {
+    margin-left: 0.4em;
+    font-size: 1.4em;
+    text-decoration: none;
+    padding: 4px;
+}
+a.helpLink:hover {
+    color: White;
+    background-color: Green;
+    font-weight: bold;
+}
+h2 .helpLink{
+    margin-left: 2em;
+    font-size: 1.0em;
+    background-color: Green;
+    color: White;
+}
+h2 a.helpLink:hover{
+    color:Yellow;
+    font-weight: normal;
+}

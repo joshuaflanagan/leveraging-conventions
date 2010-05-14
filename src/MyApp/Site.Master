@@ -1,4 +1,5 @@
 <%@ Master Language="C#" Inherits="FubuMVC.Core.View.FubuMasterPage" %>
+<%@ Import Namespace="MyApp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -46,8 +47,13 @@
             showHelp(data.helpTopic);
             return false;
         });
+
+        $("h2:first").append($("#pageHelpLink").html());
     });
 </script>
 <asp:ContentPlaceHolder id="Scripts" runat="server">
 </asp:ContentPlaceHolder>
+<script type="text/html" id="pageHelpLink">
+<%= new HelpLinkTag(Page.GetType().BaseType.Name) %>
+</script>
 </html>

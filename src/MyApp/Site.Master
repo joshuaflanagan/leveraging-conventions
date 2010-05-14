@@ -30,6 +30,7 @@
 
 <script src="Content/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
 <script src="Content/Scripts/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
+<script src="Content/Scripts/jquery.metadata.js" type="text/javascript"></script>
 <script src="Content/Scripts/timepicker.js" type="text/javascript"></script>
 <script src="Content/Scripts/help.js" type="text/javascript"></script>
 <script type="text/javascript">

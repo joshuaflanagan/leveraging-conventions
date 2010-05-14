@@ -28,12 +28,14 @@ We will always want times to use timepickers
 * create convention to add "datetime" based on property name 
 
 Help 
+git checkout helpstart 
 Show script needed to call to show context sensitive help 
-show manually wiring up click events for each place, hardcoding the topic (demonstrates that script works) 
-show passing the topic from the server, in metadata (demonstrates a single script can wire up all the clicks) 
-show automatically adding topic link to all H2s, based on page name (demonstrates convention of h2 tag as link, page name as topic) 
-show automatically adding topic link to all H3s, based on page name + heading 
-
+show currently hardcoded link to topic in main navigation 
+* create html convention to add help link after every input 
+* write script in site.master that wires up all helpLinks to showHelp using the topic from metadata 
+Show the app. click on various questions marks. mention that the topic is just a key - the related document will have proper information 
+* Add a script text/html tag on site.master that contains a HelpLinkTag for the page's topic 
+* append the link's html() to the first h2 
 Database 
 We can use conventions to generate our database 
 Show empty database 
@@ -56,4 +58,5 @@ Show app is unchanged
 * build 
 Show app 
 State will not allow more than 2 characters 
-Save - should get validation errors about name
+Save - should get validation errors about name 
+* bonus! show dates arent validated. add Html convention to add "date" class.

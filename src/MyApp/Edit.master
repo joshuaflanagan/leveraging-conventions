@@ -27,6 +27,11 @@
             }
             return false;
         });
+
+        
+    $(".date").not(".time").datepicker();
+    $(".time").datepicker({showTime: true});
+
     });
 </script>
 <asp:ContentPlaceHolder Id="Scripts" runat="server" />

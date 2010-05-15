@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Scripts" runat="server">
 <script type="text/javascript">
-
 </script>
 </asp:Content>
 

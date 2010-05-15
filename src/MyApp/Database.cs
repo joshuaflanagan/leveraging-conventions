@@ -1,6 +1,9 @@
+using System;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+using FluentNHibernate.Conventions;
+using FluentNHibernate.Conventions.Instances;
 using MyApp.Models;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
@@ -23,11 +26,28 @@ namespace MyApp
                     x.Server(".");
                     x.TrustedConnection();
                 }))
-            .Mappings(map => map.AutoMappings.Add(
+                .Mappings(map => map.AutoMappings.Add(
                 AutoMap
                 .AssemblyOf<Database>(t => typeof(Entity).IsAssignableFrom(t))
+                .Conventions.Add<StringLengthConvention>()
+                .Conventions.Add<RequiredFieldConvention>()
                 ))
+
             .BuildConfiguration();
+        }
+    }
+
+    public class RequiredFieldConvention : AttributePropertyConvention<RequiredAttribute> {
+        protected override void Apply(RequiredAttribute attribute, IPropertyInstance instance)
+        {
+            instance.Not.Nullable();
+        }
+    }
+
+    public class StringLengthConvention : AttributePropertyConvention<StringLengthAttribute> {
+        protected override void Apply(StringLengthAttribute attribute, IPropertyInstance instance)
+        {
+            instance.Length(attribute.Length);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using FubuMVC.UI;
+using MyApp.Models;
 
 namespace MyApp
 {
@@ -21,6 +22,16 @@ namespace MyApp
                     tag.AddClass("time");
                 }
             });
+
+            Editors.Always.Modify((field, tag) =>
+            {
+                var helpLinkTag = new HelpLinkTag(field.Accessor.Name);
+                tag.Next = helpLinkTag;
+                
+            });
+
+            Editors.ModifyForAttribute<StringLengthAttribute>((tag, attr) => tag.Attr("maxlength", attr.Length));
+            Editors.ModifyForAttribute<RequiredAttribute>(tag => tag.AddClass("required"));
         }
 
         private string makeId(string name)
